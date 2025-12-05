@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import FinanceManagement from "../views/finance-management.vue";
 import Cart from '@/views/cart.vue'
 import ProductDetail from '@/views/product-detail.vue'
@@ -21,7 +21,7 @@ function roleHomePath(role: string | null): string {
 }
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
