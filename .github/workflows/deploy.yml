@@ -30,9 +30,11 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Upload and Deploy
+      - name: Upload pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+      - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          artifact_name: rongxiaotong-build
-          publish_dir: ./dist
